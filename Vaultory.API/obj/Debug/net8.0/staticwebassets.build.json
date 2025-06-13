@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "tI4j17nw4Bb0bnsAmcju0GTQNRIMbWcFAItAyMp5W88=",
+  "Source": "Vaultory.API",
+  "BasePath": "_content/Vaultory.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
