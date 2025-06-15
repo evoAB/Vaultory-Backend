@@ -22,10 +22,28 @@ namespace Vaultory.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Vaultory.Domain.Entites.Category", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Category");
+                });
+
             modelBuilder.Entity("Vaultory.Domain.Entities.Product", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CategoryId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("IsDeleted")
@@ -51,7 +69,25 @@ namespace Vaultory.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CategoryId");
+
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("Vaultory.Domain.Entities.Product", b =>
+                {
+                    b.HasOne("Vaultory.Domain.Entites.Category", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("Vaultory.Domain.Entites.Category", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

@@ -9,3 +9,4 @@ D:\Vaultory\Vaultory.Domain\obj\Debug\net8.0\Vaultory.Domain.dll
 D:\Vaultory\Vaultory.Domain\obj\Debug\net8.0\refint\Vaultory.Domain.dll
 D:\Vaultory\Vaultory.Domain\obj\Debug\net8.0\Vaultory.Domain.pdb
 D:\Vaultory\Vaultory.Domain\obj\Debug\net8.0\ref\Vaultory.Domain.dll
+D:\Vaultory\Vaultory.Domain\obj\Debug\net8.0\Vaultory.Domain.sourcelink.json

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Vaultory.Application.Common.Interfaces;
 using Vaultory.Application.Products.Dtos;
 
-namespace Vaultory.Application.Products.Queries.GetProductById;
+namespace Vaultory.Application.Products.Queries;
 
 public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery, ProductDto>
 {

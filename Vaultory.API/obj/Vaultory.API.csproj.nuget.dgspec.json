@@ -26,6 +26,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "D:\\Vaultory\\Vaultory.Application\\Vaultory.Application.csproj": {
+                "projectPath": "D:\\Vaultory\\Vaultory.Application\\Vaultory.Application.csproj"
+              },
               "D:\\Vaultory\\Vaultory.Infrastructure\\Vaultory.Infrastructure.csproj": {
                 "projectPath": "D:\\Vaultory\\Vaultory.Infrastructure\\Vaultory.Infrastructure.csproj"
               }
@@ -128,6 +131,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.5.0, )"

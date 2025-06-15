@@ -13,3 +13,4 @@ D:\Vaultory\Vaultory.Application\obj\Debug\net8.0\Vaultory.Application.dll
 D:\Vaultory\Vaultory.Application\obj\Debug\net8.0\refint\Vaultory.Application.dll
 D:\Vaultory\Vaultory.Application\obj\Debug\net8.0\Vaultory.Application.pdb
 D:\Vaultory\Vaultory.Application\obj\Debug\net8.0\ref\Vaultory.Application.dll
+D:\Vaultory\Vaultory.Application\obj\Debug\net8.0\Vaultory.Application.sourcelink.json

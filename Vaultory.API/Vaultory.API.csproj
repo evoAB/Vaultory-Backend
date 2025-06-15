@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Vaultory.Infrastructure\Vaultory.Infrastructure.csproj" />
+    <ProjectReference Include="..\Vaultory.Application\Vaultory.Application.csproj" />
   </ItemGroup>
 
 </Project>

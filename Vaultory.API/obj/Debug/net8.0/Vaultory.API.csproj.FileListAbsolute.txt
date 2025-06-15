@@ -176,3 +176,6 @@ D:\Vaultory\Vaultory.API\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.M
 D:\Vaultory\Vaultory.API\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Vaultory\Vaultory.API\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Vaultory\Vaultory.API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Vaultory\Vaultory.API\obj\Debug\net8.0\Vaultory.API.sourcelink.json
+D:\Vaultory\Vaultory.API\bin\Debug\net8.0\FluentValidation.dll
+D:\Vaultory\Vaultory.API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll

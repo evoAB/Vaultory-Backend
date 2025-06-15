@@ -19,6 +19,7 @@ public class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand,
         if (product == null || product.IsDeleted) return false;
 
         product.IsDeleted = true;
+        
         await _context.SaveChangesAsync(cancellationToken);
         return true;
     }

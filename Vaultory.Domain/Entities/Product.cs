@@ -1,3 +1,6 @@
+using Vaultary.Domain.Entities;
+using Vaultory.Domain.Entites;
+
 namespace Vaultory.Domain.Entities;
 
 public class Product
@@ -8,4 +11,10 @@ public class Product
     public int Quantity { get; set; }
     public decimal Price { get; set; }
     public bool IsDeleted { get; set; } = false;
+
+    public Guid CategoryId { get; set; }
+    public Category? Category { get; set; }
+
+    public Guid LocationId { get; set; }
+    public Location? Location { get; set; }
 }

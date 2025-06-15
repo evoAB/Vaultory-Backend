@@ -17,3 +17,4 @@ D:\Vaultory\Vaultory.Infrastructure\obj\Debug\net8.0\Vaultory.Infrastructure.gen
 D:\Vaultory\Vaultory.Infrastructure\obj\Debug\net8.0\ref\Vaultory.Infrastructure.dll
 D:\Vaultory\Vaultory.Infrastructure\bin\Debug\net8.0\Vaultory.Application.dll
 D:\Vaultory\Vaultory.Infrastructure\bin\Debug\net8.0\Vaultory.Application.pdb
+D:\Vaultory\Vaultory.Infrastructure\obj\Debug\net8.0\Vaultory.Infrastructure.sourcelink.json
