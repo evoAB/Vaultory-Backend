@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Vaultory.Application.Products.Commands;
 using Vaultory.Application.Products.Queries;
@@ -6,6 +7,7 @@ using Vaultory.Application.Products.Queries.GetAllProducts;
 
 namespace Vaultory.API.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class ProductsController : ControllerBase
@@ -17,18 +19,19 @@ public class ProductsController : ControllerBase
         _mediator = mediator;
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreateProductCommand command)
     {
         var productId = await _mediator.Send(command);
-        return CreatedAtAction(nameof(GetAll), new { id = productId }, productId);
+        return CreatedAtAction(nameof(Get), new { id = productId }, productId);
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAll()
+    public async Task<IActionResult> GetAll([FromQuery] GetAllProductsQuery query)
     {
-        var products = await _mediator.Send(new GetAllProductsQuery());
-        return Ok(products);
+        var result = await _mediator.Send(query);
+        return Ok(result);
     }
 
     [HttpGet("{id}")]
@@ -39,6 +42,7 @@ public class ProductsController : ControllerBase
         return Ok(product);
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(Guid id)
     {
@@ -47,6 +51,7 @@ public class ProductsController : ControllerBase
         return NoContent();
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(Guid id, [FromBody] UpdateProductCommand command){
         if(id!=command.Id) return BadRequest("Mismatched product Id");

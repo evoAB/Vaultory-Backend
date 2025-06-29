@@ -1,5 +1,4 @@
-using Vaultary.Domain.Entities;
-using Vaultory.Domain.Entites;
+using Vaultory.Domain.Entities;
 
 namespace Vaultory.Domain.Entities;
 

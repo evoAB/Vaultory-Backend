@@ -13,6 +13,8 @@ public static class ApplicationServiceRegistration
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
         services.AddValidatorsFromAssembly(typeof(CreateProductCommandValidator).Assembly);
+        
+        services.AddValidatorsFromAssembly(typeof(UpdateProductCommandValidator).Assembly);
 
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 

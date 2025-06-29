@@ -22,7 +22,9 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
             SKU = request.SKU,
             Quantity = request.Quantity,
             Price = request.Price,
-            IsDeleted = false
+            IsDeleted = false,
+            CategoryId = request.CategoryId,
+            LocationId = request.LocationId
         };
 
         _context.Products.Add(product);

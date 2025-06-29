@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Vaultory.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e6ee748a44497f150d8ef51bb21e05619afdd8c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5bbaff94c97d0e2b9dfdfb14a40443b6f438f6a7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Vaultory.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Vaultory.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

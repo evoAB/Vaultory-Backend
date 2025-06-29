@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Vaultory.Application.Common.Interfaces;
 using Vaultory.Infrastructure.Data;
+using Vaultory.Infrastructure.Identity;
 
 namespace Vaultory.Infrastructure.DependencyInjection;
 
@@ -14,6 +15,8 @@ public static class InfrastructureServiceRegistration
 
         services.AddScoped<IVaultoryDbContext>(provider => provider.GetRequiredService<VaultoryDbContext>());
 
+        services.AddScoped<IAuthService, AuthService>();
+        
         return services;
     } 
 }
