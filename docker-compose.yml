@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: vaultory_sql
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      ACCEPT_EULA: "Y"
+    networks:
+      - vaultory_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: vaultory_redis
+    ports:
+      - "6379:6379"
+    networks:
+      - vaultory_network
+
+  vaultory_api:
+    build:
+      context: .
+      dockerfile: Vaultory.API/Dockerfile
+    container_name: vaultory_api
+    ports:
+      - "5085:8080"
+    depends_on:
+      - sqlserver
+      - redis
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ConnectionStrings__DefaultConnection: "Server=sqlserver;Database=VaultoryDb;User=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True;"
+      ConnectionStrings__Redis: "vaultory_redis:6379"
+    networks:
+      - vaultory_network
+
+networks:
+  vaultory_network:

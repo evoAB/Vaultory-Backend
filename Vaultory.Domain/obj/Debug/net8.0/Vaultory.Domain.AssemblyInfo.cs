@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Vaultory.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5bbaff94c97d0e2b9dfdfb14a40443b6f438f6a7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d31246f626fd86a2dd140217bd73b2b1732b1026")]
 [assembly: System.Reflection.AssemblyProductAttribute("Vaultory.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Vaultory.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
